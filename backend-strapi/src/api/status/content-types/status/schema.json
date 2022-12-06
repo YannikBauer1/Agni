@@ -34,9 +34,8 @@
     },
     "evaluative": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::evaluative.evaluative",
-      "inversedBy": "statuses"
+      "relation": "oneToOne",
+      "target": "api::evaluative.evaluative"
     }
   }
 }

@@ -18,14 +18,15 @@
     },
     "name": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "text": {
       "type": "text",
       "required": true
     },
     "show": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true
     }
   }
 }

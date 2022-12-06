@@ -28,7 +28,8 @@
     "modules": {
       "type": "component",
       "repeatable": true,
-      "component": "base.module"
+      "component": "base.module",
+      "required": true
     },
     "goals": {
       "displayName": "Goal",

@@ -45,7 +45,8 @@
       "displayName": "Test",
       "type": "component",
       "repeatable": true,
-      "component": "base.test"
+      "component": "base.test",
+      "required": true
     }
   }
 }

@@ -15,7 +15,8 @@
       "displayName": "Lesson",
       "type": "component",
       "repeatable": true,
-      "component": "base.lesson"
+      "component": "base.lesson",
+      "required": true
     }
   }
 }
