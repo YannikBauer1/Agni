@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial;
+        text-align: center;
+    }
+    .link {
+        margin: auto; 
+        font-size: 1.5em;
+        width: 15em; 
+        cursor: pointer;
+        box-shadow: 0 0 0.2em #9E9E9E;
+        padding:0.2em;
+        display: inline-block;
+    }
+    .link:hover{
+        background-color: #F3F3F3;
+    }
+    .header {
+        font-size: 4em;
+        margin: auto;
+        margin-top:0.5em;
+        margin-bottom:1em;
+        width:15em;
+        font-weight: 600;
+        box-shadow: 0 0 0.2em #9E9E9E;
+        background-color: #F3F3F3;
+        color: #F04D50;
+        padding:0.2em;
+        border-radius: 0.3em;
+    }
+    .container {
+        margin:2.5em;
+    }
+    .info {
+        display: inline-block;
+        width: 1em;
+        border-radius: 1em;
+        vertical-align: top;
+        color: #9E9E9E;
+        margin-left:0.1em;
+        cursor: pointer;
+        box-shadow: 0 0 0.2em #9E9E9E;
+    }
+    .info:hover{
+        background-color: #F3F3F3;
+    }
+    .balanceInfo {
+        display: inline-block;
+        width: 1em;
+        margin-right: 0.1em;
+    }
+    .sidebar{
+        position:absolute;
+        right:0;
+        top:0;
+        border-style: double;
+        height: 100%;
+        width: 25em;
+        padding-top:12em;
+    }
+    td {
+        width: 10em;
+    }
+    #strapiInfoTable{
+        visibility: hidden;
+    }
+</style>
+<script>
+    function changeStrapiInfo(){
+        const e1 = document.getElementById("strapiInfoTable")
+        const e2 = document.getElementById("strapiInfo")
+        console.log(window.getComputedStyle(document.querySelector('#strapiInfoTable')).visibility)
+        if (window.getComputedStyle(document.querySelector('#strapiInfoTable')).visibility == "hidden"){
+            e1.style.visibility="visible"
+            e2.style.color="black"
+            e2.style.backgroundColor="#F3F3F3"
+        } else if (window.getComputedStyle(document.querySelector('#strapiInfoTable')).visibility=="visible"){
+            e1.style.visibility="hidden"
+            e2.style.color="#9E9E9E"
+            e2.style.backgroundColor="white"
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="header">Agni</div>
+
+    <div class="container">
+        <div class="link" onclick="location.href='http://agni.dcc.fc.up.pt/agni'">Frontend Agni</div>
+    </div>
+    <div class="container">
+        <div class="balanceInfo"></div>
+        <div class="link" onclick="location.href='http://agni.dcc.fc.up.pt/strapi'">Backend Strapi</div>  
+        <div class="info" id="strapiInfo" onclick="changeStrapiInfo()">i</div>      
+    </div>
+    <div class="container">
+        <div class="link" onclick="location.href='http://agni.dcc.fc.up.pt/agni'">Another Agni Link</div>
+    </div>
+    <div class="sidebar" id="strapiInfoTable">
+        <table style="margin:auto;">
+            <tr>
+                <th colspan="3">Users:</th>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>teachertest@gmail.com</td>
+                <td>Test12345</td>
+                <td>Editor</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
