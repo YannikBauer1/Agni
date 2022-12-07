@@ -30,6 +30,7 @@
         color: #F04D50;
         padding:0.2em;
         border-radius: 0.3em;
+        z-index: 999;
     }
     .container {
         margin:2.5em;
@@ -53,13 +54,17 @@
         margin-right: 0.1em;
     }
     .sidebar{
-        position:absolute;
+        position:fixed;
         right:0;
-        top:0;
-        border-style: double;
-        height: 100%;
-        width: 25em;
-        padding-top:12em;
+        top:11em;
+        border-left: double;
+        height: 15em;
+        width: 20em;
+        padding-top:1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        z-index: -1;
+        background-color: #F3F3F3;;
     }
     td {
         width: 10em;
